@@ -5,9 +5,10 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
-import Fragment from "./components/Fragment";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import MessageState from "./components/MessageState";
+import { Fragment, useState } from "react";
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
     { id: 2, brand: "KIA", color: "Branco", km: 200000 },
     { id: 3, brand: "Renault", color: "Azul", km: 32000 },
   ];
+
+  const [message, setMessage] = useState();
 
   return (
     <div className='App'>
@@ -63,8 +66,11 @@ function App() {
 </Container>
 
 <ExecuteFunction myFunction={showMessage} />
+
+<MessageState msg={message} />
       
     </div>
+
   )
 }
 
