@@ -7,8 +7,13 @@ import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
+
+  function showMessage() {
+    console.log("Evento do componente pai");
+  }
 
   const cars = [
     { id: 1, brand: "Ferrari", color: "Amarelo", km: 0 },
@@ -56,6 +61,8 @@ function App() {
     <p>Eu também</p>
   </div>
 </Container>
+
+<ExecuteFunction myFunction={showMessage} />
       
     </div>
   )
