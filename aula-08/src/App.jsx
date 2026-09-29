@@ -6,6 +6,7 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
+import Container from "./components/Container";
 
 function App() {
 
@@ -46,6 +47,15 @@ function App() {
   />
 ))}
 <Fragment />
+<Container>
+  <p>Eu sou do componente superior</p>
+</Container>
+
+<Container>
+  <div>
+    <p>Eu também</p>
+  </div>
+</Container>
       
     </div>
   )
